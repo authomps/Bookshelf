@@ -13,20 +13,14 @@
 	<title>View Users</title>
 </head>
 
-<form action="process_user.php" method="post">
-
 <body>
 	<div id="wrap">
 		<div id="header"></div>
 		
 		<div id="main">
 			<?php
-				// Connect to menu database
-				@ $db = new mysqli('localhost', 'root', 'indy323', 'bookshelf');
-				if ( mysqli_connect_errno() ) {
-					echo 'Error connecting to bookshelf database';
-					exit;
-				}
+				// Connect to Database
+				include('access_database.php');
 
 				// $username = (string) $_POST['username'];
 				// $password = (string) $_POST['password'];
@@ -67,10 +61,10 @@
 
 				// $menu->free();
 				// $db->close();
+				
+				include('directory.php');
 			?>
 		</div>
 </body>
-
-</form>
 
 </html>
