@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	$username = $_SESSION['username'];
+?>
 <!--
 	Team Project 2
 	Description: Bookshelf Intermediate 2
@@ -15,23 +19,17 @@
 
 <body>
 	<div id="wrap">
-		<div id="header"></div>
+		<?php
+			include('directory.php');
+		?>
 		
 		<div id="main">
 			<?php
 				// Connect to Database
 				include('access_database.php');
 
-				// $username = (string) $_POST['username'];
-				// $password = (string) $_POST['password'];
-
 				$userQuery = "SELECT * FROM users";
 				$userStmt = $db->query($userQuery);
-
-				// $userStmt->bind_param("s",);
-				// $userStmt->bind_result($password);
-				// $userStmt->execute();
-				// $userStmt->fetch();
 
 				$num_rows = $userStmt->num_rows;
 				if ($num_rows == 0) {
@@ -47,22 +45,6 @@
 
 					echo "</table>";
 				}
-
-				// Get the entries from the menu database
-				// $query = "select * from menu;";
-				// $menu = $db->query($query);
-				// $interns = array();
-				// // Display menu from database
-				// for($i=0; $i < $menu->num_rows; $i++) {
-				// 	$row = $menu->fetch_assoc();
-				// 	$temp = array($row['name'], $row['price']);
-				// 	array_push($interns, $temp);
-				// }
-
-				// $menu->free();
-				// $db->close();
-				
-				include('directory.php');
 			?>
 		</div>
 </body>

@@ -1,0 +1,41 @@
+ul {
+	list-style-type: none;
+	margin: 0, auto;
+	padding: 0;
+	overflow: hidden;
+}
+
+header {
+	background-color: #6495ED;
+}
+
+#navBar {
+	font-family: verdana;
+	width:170px;
+	color:#FFFFFF;
+	background-color:#6495ED;
+	text-align: center;
+	padding:4px;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight: bold;
+}
+
+#navBar:hover {
+	background-color:#87CEFA;
+}
+
+.nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.nav li {
+	display: inline;
+}
+
+.nav a{
+	display: inline-block;
+}

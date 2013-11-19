@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$username = $_SESSION['username'];
 ?>
 
 <!--
@@ -19,7 +20,9 @@
 
 <body>
 	<div id="wrap">
-		<div id="header"></div>
+		<?php
+			include('directory.php');
+		?>
 		
 		<div id="main">
 			<?php
@@ -37,8 +40,6 @@
 				// $userStmt->execute();
 				// $userStmt->fetch();
 
-				echo "Logged in as ".$_SESSION['username']."<br>";
-
 				$num_rows = $userStmt->num_rows;
 				if ($num_rows == 0) {
 					echo "no books";
@@ -53,22 +54,6 @@
 
 					echo "</table>";
 				}
-
-				// Get the entries from the menu database
-				// $query = "select * from menu;";
-				// $menu = $db->query($query);
-				// $interns = array();
-				// // Display menu from database
-				// for($i=0; $i < $menu->num_rows; $i++) {
-				// 	$row = $menu->fetch_assoc();
-				// 	$temp = array($row['name'], $row['price']);
-				// 	array_push($interns, $temp);
-				// }
-
-				// $menu->free();
-				// $db->close();
-				
-				include('directory.php');
 			?>
 		</div>
 </body>

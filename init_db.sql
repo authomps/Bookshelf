@@ -51,6 +51,8 @@ insert into users values('bill','texas',NULL,'Bill','Texas');
 
 insert into books values('123-0-123-12345-1', 'Welling and Banana','Jim','Raynor');
 insert into books values('321-0-123-12345-1', 'Raynor and Banana','Bill','Raynor');
+insert into books values('321-1-123-12345-1', 'Cat in the Hat','Dr','Seuss');
+insert into books values('321-1-125-12345-1', 'Ender\'s Game','Cormac','McCarthy');
 
 insert into friends values(NULL, 'authomps', 'sampcakes');
 insert into friends values(NULL, 'authomps', 'abroom');

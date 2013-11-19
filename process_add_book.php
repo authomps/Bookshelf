@@ -34,11 +34,8 @@
 		$_SESSION['error'] = "Could not create new book.";
 		header('Location: add_book.php');
 	}
-	// Otherwise, go to user's homepage
 	else {
 		$db->close();
-		echo "Book added.<br>";
-
-		include('directory.php');
+		header('Location: view_books.php');
 	}
 ?>

@@ -18,13 +18,14 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="bookshelf.css" />
-	<title>The Bookshelf - Login</title>
+	<title>Add A Book</title>
 </head>
 
 <body>
 	<div id="wrap">
-		<div id="header">
-		</div>
+		<?php
+			include('directory.php');
+		?>
 		
 		
 		<div id="main">
@@ -40,10 +41,6 @@
 				<tr><td><label>Author's Last Name:</label></td><td><input type="text" name="author_last_name" maxlength="20" required></td></tr>
 				<tr><td colspan="2" align="center"><input type="submit" value="Submit"></td></tr>
 			</table></fieldset></form>
-
-			<?php
-				include('directory.php');
-			?>
 		</div>
 
 

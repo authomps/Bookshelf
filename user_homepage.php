@@ -13,61 +13,48 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="bookshelf.css" />
-	<title>Process New User</title>
+	<link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
+	<title>User Homepage</title>
 </head>
 
 
 <body>
 	<div id="wrap">
-		<div id="header"></div>
+		<?php
+			include('directory.php');
+		?>
 		
 		<div id="main">
 			<?php
-				echo 'logged in as '.$username.'<br>';
-
 				include('access_database.php');
+				$nameQuery = "SELECT first_name, last_name FROM users WHERE username = '".$username."'";
+				$name = $db->query($nameQuery);
+				$row = $name->fetch_assoc();
+
 
 				// list books
 				$bookQuery = "SELECT isbn, title, author_first_name, author_last_name FROM books JOIN usersBooks WHERE isbn = book AND user = '".$username."'";
 				$bookStmt = $db->query($bookQuery);
 
-				echo "<br><br>".$username."'s books:";
+				echo "<h1>".$username."</h1>".$username."'s books:";
 
 				$num_rows = $bookStmt->num_rows;
 				if ($num_rows == 0) {
-					echo "<br>no books :(<br>";
+					echo "<br>You have no books<br>";
 				} else {
 					echo "<table>";
-
+					echo '<tr><th>ISBN</th><th>Title</th><th colspan="2">Author</th><th></tr>';
 					for ($i=0; $i < $num_rows; $i++) {
 						$row = $bookStmt->fetch_assoc();
-						echo '<tr><td>'.$row['isbn'].'</td><td>'.$row['title'].'</td><td>'.$row['author_first_name'].'</td><td>'.$row['author_last_name'].'</td></tr>';
+						echo '<form action="process_user_remove_book.php" method="post">';
+						echo '<tr><td>'.$row['isbn'].'</td><td>'.$row['title'].'</td><td>'.$row['author_first_name'].'</td><td>'.$row['author_last_name'].'</td><td><input type="submit" value="Remove"></td><input type ="hidden" name="isbn" value="'.$row['isbn'].'"></tr>';
+						echo '</form>';
 					}
 
 					echo "</table>";
 				}
 			?>
-			<form action="process_book_to_user.php" method="post">
-			<select name="isbn">
-				<?php
-					$bookQuery = "SELECT isbn FROM books";
-					$bookStmt = $db->query($bookQuery);
-					// $bookStmt->data_seek(0);
-					for ($i=0; $i<$bookStmt->num_rows; $i++) {
-						$row = $bookStmt->fetch_assoc();
-						$isbn = stripslashes($row['isbn']); 
-					    echo  '<option value = "'.$isbn.'">'.$isbn.'</option>';
-					}
-				?>
-			</select>
-			<input type="submit" value="Add book">
-			</form>
-
-			<?php
-
-				include('directory.php');
-			?>
+			<button type="button" onclick="location.href='user_add_book.php'">Add Book</button><br>
 		</div>
 </body>
 </html>

@@ -22,8 +22,6 @@
 
 <body>
 	<div id="wrap">
-		<div id="header">
-		</div>
 		
 		<div id="main">
 			<form action="process_user_login.php" method="post"><fieldset overflow="hidden"><table>
