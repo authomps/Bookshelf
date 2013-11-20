@@ -51,14 +51,20 @@ Book lists:
 		- table: UsersLists (id, username, list_id)
 		- table: ListsBooks (id, list_id, isbn)
 		- table: Lists (id, username, list_name)
-	- Homepage:
+	- User's Profile Page:
 		- List of books would change to list of book lists
 		- Create a new list
 		- Modify a list
 		- Remove a list
 		- View a list
-	- Booklist:
+	- User's Booklist:
 		- Displays list of books (like how the homepage displays books now)
 		- Add a book to the list
 		- Remove a book from the list
 		- View the book on the list
+	- Friend's Profile Page:
+		- List friend's lists
+		- View list
+	- Friend's Booklist Page:
+		- Displays list of books
+		- View Book
