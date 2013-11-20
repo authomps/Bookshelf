@@ -61,7 +61,7 @@
 				echo "Everyone is your friend<br>";
 			} else {
 				echo "<table>";
-
+				echo '<th>Username</th><th colspan="2">Name</th><th></th>';
 				for ($i=0; $i < $num_rows; $i++) {
 					$row = $notFriendStmt->fetch_assoc();
 					echo '<form action="process_user_add_friend.php" method="post">';
