@@ -15,7 +15,7 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="bookshelf.css" />
+	<link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
 	<title>Add A Friend</title>
 </head>
 
@@ -23,14 +23,14 @@
 	<div id="wrap">
 		<?php
 			include('directory.php');
+			include('friends_list.php');
 		?>
 		
 		<div id="main">
-			<form action="process_user_add_friend.php" method="post"><fieldset overflow="hidden"><table>
+			<form action="process_user_add_friend.php" method="post"><table>
 				<tr><td><label>Friend's Username:</label></td><td><input type="text" name="friend_name"></td></tr>
 				<tr><td colspan="2" align="center"><input type="submit" value="Submit"></td></tr>
-			</table></fieldset></form>
-		</div>
+			</table></form>
 
 
 		<?php
@@ -72,6 +72,8 @@
 				echo "</table>";
 			}
 		?>
-
+		</div>
+		<div style="clear: both; background-color: black"></div>
+	</div>
 </body>
 </html>

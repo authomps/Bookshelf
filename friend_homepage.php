@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$username = $_SESSION['username'];
+	$friend_name = $_POST['friend_name']
 ?>
 
 <!--
@@ -30,6 +31,7 @@
 		<div id="main">
 			<?php
 				include('access_database.php');
+				$username = $friend_name;
 				$nameQuery = "SELECT first_name, last_name FROM users WHERE username = '".$username."'";
 				$name = $db->query($nameQuery);
 				$row = $name->fetch_assoc();
@@ -43,22 +45,20 @@
 
 				$num_rows = $bookStmt->num_rows;
 				if ($num_rows == 0) {
-					echo "<br>You have no books<br>";
+					echo "<p>No books</p>";
 				} else {
 					echo "<table>";
 					echo '<tr><th>ISBN</th><th>Title</th><th colspan="2">Author</th><th></tr>';
 					for ($i=0; $i < $num_rows; $i++) {
 						$row = $bookStmt->fetch_assoc();
-						echo '<form action="process_user_remove_book.php" method="post">';
-						echo '<tr><td>'.$row['isbn'].'</td><td>'.$row['title'].'</td><td>'.$row['author_first_name'].'</td><td>'.$row['author_last_name'].'</td><td><input type="submit" value="Remove"></td><input type ="hidden" name="isbn" value="'.$row['isbn'].'"></tr>';
-						echo '</form>';
+						echo '<tr><td>'.$row['isbn'].'</td><td>'.$row['title'].'</td><td>'.$row['author_first_name'].'</td><td>'.$row['author_last_name'].'</td></tr>';
 					}
 
 					echo "</table>";
 				}
 			?>
-			<button type="button" onclick="location.href='user_add_book.php'">Add Book</button>
 		</div>
+		
 		<div style="clear: both; background-color: black"></div>
 	</div>
 </body>

@@ -1,3 +1,10 @@
+header {
+	background-color: #6495ED;
+	text-align:center;
+	margin-left:auto; 
+    margin-right:auto;
+}
+
 ul {
 	list-style-type: none;
 	margin: 0, auto;
@@ -5,8 +12,19 @@ ul {
 	overflow: hidden;
 }
 
-header {
-	background-color: #6495ED;
+.nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.nav li {
+	display: inline;
+}
+
+.nav a{
+	display: inline-block;
 }
 
 #navBar {
@@ -23,19 +41,4 @@ header {
 
 #navBar:hover {
 	background-color:#87CEFA;
-}
-
-.nav {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-}
-
-.nav li {
-	display: inline;
-}
-
-.nav a{
-	display: inline-block;
 }

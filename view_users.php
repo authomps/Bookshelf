@@ -13,7 +13,7 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="bookshelf.css" />
+	<link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
 	<title>View Users</title>
 </head>
 

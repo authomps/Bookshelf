@@ -3,17 +3,12 @@
 	$username = $_SESSION['username'];
 ?>
 
-<!--
-	Team Project 2
-	Description: Bookshelf Intermediate 2
-	Date: 11/12/13
-	@author Austin Thompson, Alex Broom, Nick Coats
--->
+<!DOCTYPE html>
 
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="bookshelf.css" />
+	<link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
 	<title>Add A Book</title>
 </head>
 
@@ -22,6 +17,7 @@
 	<div id="wrap">
 		<?php
 			include('directory.php');
+			include('friends_list.php');
 		?>
 		
 		<div id="main">
@@ -62,5 +58,7 @@
 				}
 			?>
 		</div>
+		<div style="clear: both; background-color: black"></div>
+	</div>
 </body>
 </html>

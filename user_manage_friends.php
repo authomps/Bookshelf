@@ -14,7 +14,7 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="bookshelf.css" />
+	<link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
 	<title>Manage Friends</title>
 </head>
 
@@ -22,6 +22,7 @@
 	<div id="wrap">
 		<?php
 			include('directory.php');
+			include('friends_list.php');
 		?>
 		
 		<div id="main">
@@ -53,6 +54,8 @@
 			?>
 			<button type="button" onclick="location.href='user_add_friend.php'">Add Friends</button><br>
 		</div>
+		<div style="clear: both; background-color: black"></div>
+	</div>
 </body>
 
 </html>
