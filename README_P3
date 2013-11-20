@@ -1,0 +1,64 @@
+Alexander Broom
+Nick Coats
+Austin Thompson
+
+List of Features (features with an X are completed):
+
+X create new account
+X login
+X edit list of books
+X view other user's profiles
+X view book info
+add currently reading book
+X friend'list
+X add book to database
+Extra: Google API
+Extra: Book lists
+
+Add currently reading book:
+	On profile pages, another element should be added which displays the book
+	the profile's owner is currently reading.  The book can be retrieved with a
+	simple Database Query joining the users table and book table and checkign
+	for matches.
+
+Google API:
+	Retrieve additional information from the service to populate the book info
+	page.  If Google API does not work out, then users should be allowed to
+	provide additional information (Brief Description, Date of Publication, etc)
+	when adding a book on the site.  If the latter is chosen, then the Book
+	table in the database would have to be expanded to accomodate the additional
+	data.
+
+CSS/Layout:
+	While we are happy with our current styling, we think it could be better.
+	We will constantly be experimenting with the following until we find
+	some combination that just feels natural.
+	- Different fonts
+	- New background image
+	- Different color schemes
+	- Improved navigation
+	- Restructure of homepage
+	- Increased size of tables
+	- Switch buttons in friend's list to links (like in the books list)
+
+Book lists:
+	Originally, we had planned to add book lists, however we marked it as extra
+	during our proposal meeting.  Depending on if everything above gets
+	implemented, we would then attempt the book lists.  For the book lists we
+	would need:
+	- Database:
+		- UsersBooks splits into UsersLists and ListsBooks
+		- table: UsersLists (id, username, list_id)
+		- table: ListsBooks (id, list_id, isbn)
+		- table: Lists (id, username, list_name)
+	- Homepage:
+		- List of books would change to list of book lists
+		- Create a new list
+		- Modify a list
+		- Remove a list
+		- View a list
+	- Booklist:
+		- Displays list of books (like how the homepage displays books now)
+		- Add a book to the list
+		- Remove a book from the list
+		- View the book on the list
