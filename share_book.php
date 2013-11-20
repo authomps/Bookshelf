@@ -23,6 +23,7 @@
 		
 		
 		<div id="main">
+			<h1>Add A Book</h1>
 			<?php
 				if (!empty($error)) {
 					echo $error;

@@ -49,7 +49,7 @@
 					for ($i=0; $i < $num_rows; $i++) {
 						$row = $userStmt->fetch_assoc();
 
-						echo '<tr><td>'.$row['isbn'].'</td><td>'.$row['title'].'</td><td>'.$row['author_first_name'].'</td><td>'.$row['author_last_name'].'</td></tr>';
+						echo '<tr><td>'.$row['isbn'].'</td><td>'.'<a href="book_view.php?isbn='.$row['isbn'].'">'.$row['title'].'</a>'.'</td><td>'.$row['author_first_name'].'</td><td>'.$row['author_last_name'].'</td><td><input type="submit" value="Remove"></td><input type ="hidden" name="isbn" value="'.$row['isbn'].'"></tr>';
 					}
 
 					echo "</table>";

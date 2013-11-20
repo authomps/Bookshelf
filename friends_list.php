@@ -1,4 +1,6 @@
 <div id="friends">
+
+	<h2 align="center">Friends</h2>
 	<?php
 		// Connect to Database
 		include('access_database.php');

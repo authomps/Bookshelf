@@ -19,17 +19,14 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="bookshelf.css" />
+	<link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
 	<title>Create New User</title>
 </head>
 
-<body>
-	<div id="wrap">
-		<div id="header">
-		</div>
-		
-		<div id="main">
-			<form action="process_new_user.php" method="post"><fieldset><table>
+<body>		
+		<div id="login">
+			<form action="process_new_user.php" method="post"><table>
+				<caption>Create New User</caption>
 				<?php
 					if (!empty($error)) {
 						echo '<tr><td colspan="2"><p class="error">'.$error.'</p></td></tr>';
@@ -58,7 +55,7 @@
 					echo '></td></tr>';
 				?>
 				<tr><td cospan="2"><input type="submit" value="Submit"></td></tr>
-			</table></fieldset></form>
+			</table></form>
 		</div>
 </body>
 

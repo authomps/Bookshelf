@@ -1,4 +1,12 @@
+<!DOCTYPE html>
+
 <link rel="stylesheet" type="text/css" href="css/header.css">
+
+<div id='title'>
+	<h1>The Bookshelf</h1>
+</div>
+
+
 <header>
 	<ul class="nav">
 		<li><a id="navBar" href="user_homepage.php"><?php echo $username;?></a></li>

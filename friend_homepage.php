@@ -33,15 +33,16 @@
 				include('access_database.php');
 				$username = $friend_name;
 				$nameQuery = "SELECT first_name, last_name FROM users WHERE username = '".$username."'";
-				$name = $db->query($nameQuery);
-				$row = $name->fetch_assoc();
+				$nameInfo = $db->query($nameQuery);
+				$row = $nameInfo->fetch_assoc();
+				$name = $row['first_name']." ".$row['last_name'];
 
 
 				// list books
 				$bookQuery = "SELECT isbn, title, author_first_name, author_last_name FROM books JOIN usersBooks WHERE isbn = book AND user = '".$username."'";
 				$bookStmt = $db->query($bookQuery);
 
-				echo "<h1>".$username."</h1>".$username."'s books:";
+				echo "<h1>".$name." (".$username.")</h1>".$row['first_name']."'s books:";
 
 				$num_rows = $bookStmt->num_rows;
 				if ($num_rows == 0) {

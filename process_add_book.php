@@ -19,7 +19,7 @@
 	// If no matching book, return to add book screen with error message
 	if ($bookStmt->num_rows != 0) {
 		$_SESSION['error'] = "Book already added.";
-		header('Location: add_book.php');
+		header('Location: user_add_book.php');
 		return;
 	}
 
@@ -32,10 +32,10 @@
 	if (!$stmt->execute()) {
 		$db->close();
 		$_SESSION['error'] = "Could not create new book.";
-		header('Location: add_book.php');
+		header('Location: user_add_book.php');
 	}
 	else {
 		$db->close();
-		header('Location: view_books.php');
+		header('Location: user_add_book.php');
 	}
 ?>

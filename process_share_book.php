@@ -36,6 +36,6 @@
 	}
 	else {
 		$db->close();
-		header('Location: view_books.php');
+		header('Location: user_add_book.php');
 	}
 ?>

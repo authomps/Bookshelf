@@ -1,7 +1,7 @@
 html, body {
-	margin:0;
+	margin:1%;
 	padding:0;
-	background-color: #EDBD64;
+	background-image: url('http://p1.pichost.me/i/15/1377859.jpg');
 }
 
 #wrap {
@@ -36,6 +36,28 @@ html, body {
 table {
 	margin-left:auto; 
     margin-right:auto;
+}
+
+th {
+	min-width:100px;
+	background-color: #87CEFA;
+}
+
+#login {
+	color: white;
+	font-weight: bold;
+	background-color: #6495ED;
+	border: clear;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	width: 45%;
+	margin:0 auto;
+	font-size: 20px;
+}
+
+#login caption {
+	font-size: 32px;
+	padding-bottom: 5%;
 }
 
 /*div {

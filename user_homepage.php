@@ -31,15 +31,17 @@
 			<?php
 				include('access_database.php');
 				$nameQuery = "SELECT first_name, last_name FROM users WHERE username = '".$username."'";
-				$name = $db->query($nameQuery);
-				$row = $name->fetch_assoc();
+				$nameInfo = $db->query($nameQuery);
+				$row = $nameInfo->fetch_assoc();
+				$name = $row['first_name']." ".$row['last_name'];
+
 
 
 				// list books
 				$bookQuery = "SELECT isbn, title, author_first_name, author_last_name FROM books JOIN usersBooks WHERE isbn = book AND user = '".$username."'";
 				$bookStmt = $db->query($bookQuery);
 
-				echo "<h1>".$username."</h1>".$username."'s books:";
+				echo "<h1>".$name." (".$username.")</h1>".$row['first_name']."'s books:";
 
 				$num_rows = $bookStmt->num_rows;
 				if ($num_rows == 0) {
@@ -50,7 +52,7 @@
 					for ($i=0; $i < $num_rows; $i++) {
 						$row = $bookStmt->fetch_assoc();
 						echo '<form action="process_user_remove_book.php" method="post">';
-						echo '<tr><td>'.$row['isbn'].'</td><td>'.$row['title'].'</td><td>'.$row['author_first_name'].'</td><td>'.$row['author_last_name'].'</td><td><input type="submit" value="Remove"></td><input type ="hidden" name="isbn" value="'.$row['isbn'].'"></tr>';
+						echo '<tr><td>'.$row['isbn'].'</td><td>'.'<a href="book_view.php?isbn='.$row['isbn'].'">'.$row['title'].'</a>'.'</td><td>'.$row['author_first_name'].'</td><td>'.$row['author_last_name'].'</td><td><input type="submit" value="Remove"></td><input type ="hidden" name="isbn" value="'.$row['isbn'].'"></tr>';
 						echo '</form>';
 					}
 
