@@ -28,7 +28,7 @@
 			include('friends_list.php');
 		?>
 		
-		<div id="main">
+		<div id="main" style="height: 646px; min-width: 500px;">
 			<?php
 				include('access_database.php');
 				$bookQuery = "SELECT * FROM books WHERE isbn = '".$isbn."'";
@@ -43,6 +43,22 @@
 				echo '<p>'.$isbn.'</p>';
 				
 			?>
+			<script type="text/javascript" src="//www.google.com/jsapi"></script>
+		    <script type="text/javascript">
+		      google.load("books", "0");
+
+		      function alertNotFound() {
+		      	alert("Could not embed the book!");
+		      }
+
+		      function initialize() {
+		        var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
+		        viewer.load(<?php echo "'ISBN:".$isbn."'" ?>, alertNotFound);
+		      }
+
+		      google.setOnLoadCallback(initialize);
+		    </script>
+		    <div id="viewerCanvas" style="width: 500px; height: 500px; padding-left: 13px;"></div>
 		</div>
 		<div style="clear: both; background-color: black"></div>
 	</div>

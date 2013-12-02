@@ -5,7 +5,7 @@ html, body {
 }
 
 #wrap {
-	width:80%;
+	width:750px;
 	height: 100%;
 	margin:0 auto;
 	font-size: 16px;
@@ -21,7 +21,6 @@ html, body {
 	margin:0 auto;
 	text-align:center;
 	background-color: white;
-	/*height: 100%;*/
 	width: 70%;
 	min-height: 400px;
 }
@@ -61,7 +60,7 @@ th {
 	padding-bottom: 5%;
 }
 
-/*div {
-	border: 1px solid red;
-
-}*/
+p {
+	padding:0;
+	margin:0;
+}
