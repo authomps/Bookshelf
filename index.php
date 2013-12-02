@@ -1,6 +1,8 @@
 <?php
 	session_start();
-	$error = $_SESSION['error'];
+	if(isset($_SESSION['error'])) {
+		$error = $_SESSION['error'];
+	}
 	session_destroy();
 ?>
 
