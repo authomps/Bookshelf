@@ -18,10 +18,10 @@
 			for ($i=0; $i < $num_rows; $i++) {
 				$row = $friendStmt->fetch_assoc();
 				$friends[] = "'".$row['username']."'";
-				echo '<form action="friend_homepage.php" method="post">';
-				echo '<tr><td>'.$row['first_name'].' '.$row['last_name'].'</td><td><input type="submit" value="View Profile"></td><input type ="hidden" name="friend_name" value="'.$row['username'].'">';
+				// echo '<form action="friend_homepage.php" method="post">';
+				echo '<tr><td>'.'<a href="friend_homepage.php?friend_name='.$row['username'].'">'.$row['first_name'].' '.$row['last_name'].'</a>'.'</td></tr>';
 				// echo '<tr><td><input type="submit" value="'.$row['first_name'].' '.$row['last_name'].'"></td><input type ="hidden" name="friend_name" value="'.$row['username'].'">';
-				echo '</form>';
+				// echo '</form>';
 			}
 
 			echo "</table>";
