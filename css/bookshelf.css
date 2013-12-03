@@ -1,36 +1,63 @@
 html, body {
-	margin:1%;
-	padding:0;
-	background-image: url('background_wood.jpg');
+	font-family: 'Oswald';
+	background-image: url('http://www.photos-public-domain.com/wp-content/uploads/2011/04/natural-tan-canvas-fabric-texture.jpg');
 }
 
 #wrap {
-	width:750px;
+	width:800px;
 	height: 100%;
 	margin:0 auto;
-	font-size: 16px;
-	background-color: #87CEFA;
+	font-size: 20px;
+	background-color: none;
 	min-width: 550px;
-	/*position: fixed;
-	height: 100%;
-	top: 0;*/
+	min-height:750px;
 }
 
 #main {
 	float: right;
+	border: solid;
+	border-color: #2E2303;
+	border-width: 7px;
+	border-radius:10px;
 	margin:0 auto;
 	text-align:center;
 	background-color: white;
 	width: 70%;
-	min-height: 400px;
+	background-color: #EBEAE1;
+	min-height: 750px;
+	margin-top: 10px;
 }
 
 #friends {
 	float: left;
-	width: 30%;
+	vertical-align: text-top;
+	border: solid;
+	border-color: #2E2303;
+	border-width: 7px;
+	border-radius:10px;
+	width: 25%;
 	height: 100%;
-	background-color: #87CEFA;
+	background-color: #EBEAE1;
+	margin-right: 5px;
+	margin-top: 10px;
+	min-height: 750px;
 }
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color:black;
+}
+
+a:visited {
+	color:black;
+}
+
+a:hover {color:#D6D2B0;}
+
+a:active {color:#D6D2B0;}
 
 table {
 	margin-left:auto; 
@@ -39,7 +66,15 @@ table {
 
 th {
 	min-width:100px;
-	background-color: #87CEFA;
+	color: white;
+	background-color: #2E2303;
+	text-align: left;
+	padding: 10px;
+}
+
+td {
+	text-align: left;
+	padding-left: 10px;
 }
 
 #login {
