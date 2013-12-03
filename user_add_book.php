@@ -62,6 +62,7 @@
 					echo "</table>";
 				}
 			?>
+			<button type="button" onclick="location.href='user_homepage.php'">Return</button>
 		</div>
 		<div style="clear: both; background-color: black"></div>
 	</div>
