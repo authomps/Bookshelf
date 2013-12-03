@@ -5,7 +5,8 @@
 	}
 	session_destroy();
 ?>
-
+<link href='http://fonts.googleapis.com/css?family=Yellowtail|Great+Vibes|Italianno' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oldenburg|Monsieur+La+Doulaise|Open+Sans+Condensed:300|Hammersmith+One|Six+Caps|Yanone+Kaffeesatz|Oswald' rel='stylesheet' type='text/css'>
 <!--
 	Team Project 2
 	Description: Bookshelf Intermediate 2
@@ -16,7 +17,6 @@
 <!DOCTYPE html>
 
 <html>
-
 <head>
 	<link rel="stylesheet" type="text/css" href="css/bookshelf.css" />
 	<title>The Bookshelf - Login</title>
@@ -24,8 +24,9 @@
 
 <body>
 		<div id="login">
-			<form action="process_user_login.php" method="post"><table>
-				<caption>User Login</caption>
+			<p id="login_title">The Bookshelf</p>
+			<form action="process_user_login.php" method="post"><table align="center">
+				<caption id="logon">User Login</caption>
 				<?php
 					if (!empty($error)) {
 						echo '<tr><td colspan="2"><p class="error">'.$error.'</p></td></tr>';

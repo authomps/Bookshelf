@@ -63,7 +63,7 @@
 
 		      google.setOnLoadCallback(initialize);
 		    </script>
-		    <div id="viewerCanvas" style="width: 500px; height: 75%; padding-left: 13px;"></div>
+		    <div id="viewerCanvas" style="width: 500px; height: 750px; padding: 30px; padding-left: 60px; margin-bottom: 100px;"></div>
 		</div>
 		<div style="clear: both; background-color: black"></div>
 	</div>

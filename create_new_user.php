@@ -7,6 +7,9 @@
 	session_destroy();
 ?>
 
+<link href='http://fonts.googleapis.com/css?family=Yellowtail|Great+Vibes|Italianno' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oldenburg|Monsieur+La+Doulaise|Open+Sans+Condensed:300|Hammersmith+One|Six+Caps|Yanone+Kaffeesatz|Oswald' rel='stylesheet' type='text/css'>
+
 <!--
 	Team Project 2
 	Description: Bookshelf Intermediate 2

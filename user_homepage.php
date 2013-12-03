@@ -41,7 +41,8 @@
 				$nameInfo = $db->query($nameQuery);
 				$row = $nameInfo->fetch_assoc();
 				$name = $row['first_name']." ".$row['last_name'];
-				echo '<h1 id="user_profile_name">'.$name." (".$username.")</h1>";
+				
+				echo "<p id=\"username\">".$name."</p>";
 
 				// Current book
 				if (!is_null($row['current_book'])) {
@@ -49,9 +50,9 @@
 					$bookInfo = $db->query($bookQuery);
 					$row2 = $bookInfo->fetch_assoc();
 					$book = $row2['title']." by ".$row2['author_first_name']." ".$row2['author_last_name'];
-					echo '<p id="user_currently_reading"> is currently reading <a href="book_view.php?isbn='.$row['current_book'].'">'.$book.".</a></p>";
+					echo '<p id="user_currently_reading"> Currently reading: <a href="book_view.php?isbn='.$row['current_book'].'">'.$book.".</a></p>";
 				} else {
-					echo '<p id="user_currently_reading"> is currently reading nothing. </p>';
+					echo '<p id="user_currently_reading"> Currently reading: nothing! </p>';
 				}
 
 				// list books
@@ -63,11 +64,11 @@
 					echo "<br>You have no books<br>";
 				} else {
 					echo "<table>";
-					echo '<tr><th>ISBN</th><th>Title</th><th>Author</th><th/><th/></tr>';
+					echo '<tr><th>ISBN</th><th>Title</th><th>Author</th><th>Action</th></tr>';
 					for ($i=0; $i < $num_rows; $i++) {
 						$row = $bookStmt->fetch_assoc();
 						echo '<form action="process_user_remove_book.php" method="post">';
-						echo '<tr><td>'.$row['isbn'].'</td><td>'.'<a href="book_view.php?isbn='.$row['isbn'].'">'.$row['title'].'</a>'.'</td><td>'.$row['author_first_name'].' '.$row['author_last_name'].'</td><td><input type="submit" name="remove" value="Remove"></td><td><input type = "submit" name="reading" value="Read Me"></td><input type ="hidden" name="isbn" value="'.$row['isbn'].'"></tr>';
+						echo '<tr><td>'.$row['isbn'].'</td><td>'.'<a href="book_view.php?isbn='.$row['isbn'].'">'.$row['title'].'</a>'.'</td><td>'.$row['author_first_name'].' '.$row['author_last_name'].'</td><td><input type="submit" name="remove" value="Remove"><br><input type = "submit" name="reading" value="Read Me"></td><input type ="hidden" name="isbn" value="'.$row['isbn'].'"></tr>';
 						echo '</form>';
 					}
 
