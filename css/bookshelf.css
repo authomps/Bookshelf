@@ -1,16 +1,16 @@
 html, body {
 	font-family: 'Oswald';
-	background-image: url('http://www.photos-public-domain.com/wp-content/uploads/2011/04/natural-tan-canvas-fabric-texture.jpg');
+	background-image:url('background_wood.jpg');
 }
 
 #wrap {
-	width:800px;
+	width:900px;
 	height: 100%;
 	margin:0 auto;
 	font-size: 20px;
 	background-color: none;
 	min-width: 550px;
-	min-height:750px;
+	min-height:1300px;
 }
 
 #main {
@@ -24,7 +24,7 @@ html, body {
 	background-color: white;
 	width: 70%;
 	background-color: #EBEAE1;
-	min-height: 750px;
+	min-height: 1000px;
 	margin-top: 10px;
 }
 
@@ -40,11 +40,29 @@ html, body {
 	background-color: #EBEAE1;
 	margin-right: 5px;
 	margin-top: 10px;
-	min-height: 750px;
+	min-height: 1000px;
 }
 
-a {
-	text-decoration: none;
+#friends_head {
+	font-family: 'Oswald';
+	width:210px;
+	color:#FFFFFF;
+	background-image: none;
+	background-color:#2E2303;
+	text-align: center;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight: bold;
+	border-color: #2E2303; 
+	padding: 10px;
+	border: 0px solid;
+	border-radius:1px;
+}
+
+#user_currently_reading {
+	text-align: left;
+	margin: 15px;
+	margin-left: 40px;
 }
 
 a:link {
@@ -62,6 +80,7 @@ a:active {color:#D6D2B0;}
 table {
 	margin-left:auto; 
     margin-right:auto;
+    min-width: 500px;
 }
 
 th {
@@ -69,7 +88,7 @@ th {
 	color: white;
 	background-color: #2E2303;
 	text-align: left;
-	padding: 10px;
+	padding: 5px;
 }
 
 td {
@@ -77,22 +96,65 @@ td {
 	padding-left: 10px;
 }
 
-#login {
-	color: white;
+#login_title {
+	font-family: 'italianno';
+	font-size: 52px;
+}
+
+#login td {
+	text-align: center;
+}
+
+#login table {
+	min-width: 100px;
+}
+
+button {
+	font-family: 'Oswald';
 	font-weight: bold;
-	background-color: #6495ED;
-	border: white;
+	background-color: #9D9E86;
+	color: white;
+	font-size: 16px;
+
+}
+
+input[type=submit] {
+    font-family: 'Oswald';
+    font-weight: bold;
+	background-color: #9D9E86;
+	color: white;
+	font-size: 16px;
+}
+
+#login {
+	font-family: 'Oswald';
+	font-size: 32px;
+	background-color: #EBEAE1;
+	background-color:white;
+	/*font-size: 130px;*/
+	text-align: center;
+	vertical-align: text-top;
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 10px;
+	/*font-weight: bold;*/
+	/*color: #30302B;*/
+	border: solid;
+	border-color: #2E2303;
 	border-width: 10px;
-	padding-top: 5%;
-	padding-bottom: 5%;
-	width: 45%;
-	margin:0 auto;
-	font-size: 20px;
+	/*border:2px solid;*/
+	border-radius:10px;
+	background-color: #EBEAE1;
+	padding-bottom: 20px;
+	/*text-shadow: 3px 1px gray;*/
 }
 
 #login caption {
 	font-size: 32px;
 	padding-bottom: 5%;
+	font-family: 'italianno';
 }
 
 p {

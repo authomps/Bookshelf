@@ -1,6 +1,6 @@
 <div id="friends">
 
-	<h2 align="center">Friends</h2>
+	<p id="friends_head" align="center">Friends</p>
 	<?php
 		// Connect to Database
 		include('access_database.php');

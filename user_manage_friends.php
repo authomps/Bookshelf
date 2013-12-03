@@ -46,7 +46,7 @@
 					echo "You have no friends.";
 				} else {
 					echo "<table>";
-					echo '<th>Username</th><th colspan="2">Name</th><th></th>';
+					echo '<th>Username</th><th colspan="2">Name</th><th>Action</th></th>';
 
 					for ($i=0; $i < $num_rows; $i++) {
 						$row = $friendStmt->fetch_assoc();
