@@ -1,5 +1,10 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['username'])) {
+		$_SESSION['error'] = "You must be logged in to view this page.";
+		header('Location: index.php');
+		return;
+	}
 	$username = $_SESSION['username'];
 	$isbn = $_GET["isbn"];
 ?>
@@ -58,7 +63,7 @@
 
 		      google.setOnLoadCallback(initialize);
 		    </script>
-		    <div id="viewerCanvas" style="width: 500px; height: 500px; padding-left: 13px;"></div>
+		    <div id="viewerCanvas" style="width: 500px; height: 75%; padding-left: 13px;"></div>
 		</div>
 		<div style="clear: both; background-color: black"></div>
 	</div>

@@ -42,18 +42,18 @@ CREATE TABLE usersBooks
 	FOREIGN KEY (book) REFERENCES books(isbn)
 ) engine=InnoDB;
 
-insert into users values('authomps','password',NULL,'Austin','Thompson');
-insert into users values('abroom','123456',NULL,'Alex','Broom');
-insert into users values('sampcakes','hey',NULL,'Samp','Cakes');
-insert into users values('hello','password',NULL,'Austin','Tomboy');
-insert into users values('ncoats','123',NULL,'Nick','Coats');
-insert into users values('bill','texas',NULL,'Bill','Texas');
-
 insert into books values('0345333926', 'Ringworld','Larry','Niven');
 insert into books values('9781629100111', 'The Call of the Wild','Jack','London');
 insert into books values('0486292568', 'Wuthering Heights', 'Emily', 'Bronte');
 insert into books values('0307417131', 'Hitchhiker\'s Guide to the Galaxy', 'Douglas', 'Adams');
 insert into books values('9780307567277', 'Cat\'s Cradle: A Novel', 'Kurt', 'Vonnegut');
+
+insert into users values('authomps','password','0345333926','Austin','Thompson');
+insert into users values('abroom','123456',NULL,'Alex','Broom');
+insert into users values('sampcakes','hey',NULL,'Samp','Cakes');
+insert into users values('hello','password',NULL,'Austin','Tomboy');
+insert into users values('ncoats','123',NULL,'Nick','Coats');
+insert into users values('bill','texas',NULL,'Bill','Texas');
 
 insert into friends values(NULL, 'authomps', 'sampcakes');
 insert into friends values(NULL, 'authomps', 'abroom');
